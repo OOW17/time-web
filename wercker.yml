@@ -86,7 +86,6 @@ deploy-to-kubernetes:
 
     - kubectl:
         name: set deployment timeout
-        cwd: deployment
         server: $KUBERNETES_MASTER
         token: $KUBERNETES_TOKEN
         insecure-skip-tls-verify: true
@@ -94,7 +93,6 @@ deploy-to-kubernetes:
 
     - kubectl:
         name: check deployment status
-        cwd: deployment
         server: $KUBERNETES_MASTER
         token: $KUBERNETES_TOKEN
         insecure-skip-tls-verify: true
